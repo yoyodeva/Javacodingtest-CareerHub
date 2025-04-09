@@ -19,7 +19,7 @@ public class ApplicationDAOImpl implements ApplicationDAO {
             stmt.setInt(1, application.getApplicationId());
             stmt.setInt(2, application.getJobId());
             stmt.setInt(3, application.getApplicantId());
-            stmt.setDate(4, new java.sql.Date(application.getApplicationDate().getTime()));  // Fix casting issue
+            stmt.setDate(4, new java.sql.Date(application.getApplicationDate().getTime()));  
             stmt.setString(5, application.getCoverLetter());
             stmt.executeUpdate();
         } catch (SQLException e) {
